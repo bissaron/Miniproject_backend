@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import java.util.Date;
+import java.sql.Date;
 
 
 @Entity
@@ -79,11 +79,10 @@ public class Transaction {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	public Transaction(Integer id, String transactionId, Date date, double amount, String type, String category,
+	public Transaction(Integer id, Date date, double amount, String type, String category,
 			String description, User user) {
 		super();
 		this.id = id;
-		this.transactionId = transactionId;
 		this.date = date;
 		this.amount = amount;
 		this.type = type;

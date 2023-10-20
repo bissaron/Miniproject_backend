@@ -28,7 +28,7 @@ public class UserController {
 	UserRepository userRepository;
     
 	
-	@GetMapping("/users")
+	@GetMapping("/user")
 	public ResponseEntity<Object> getStudent() {
      try {		
 	     List<User> users = userRepository.findAll(); 	
@@ -38,7 +38,7 @@ public class UserController {
 	}
 	}
 
-	@PostMapping("/users")
+	@PostMapping("/user")
 	public ResponseEntity<Object> addStudent(@RequestBody User body) {
 		
 		try {		
